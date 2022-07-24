@@ -1,0 +1,109 @@
+.container{
+    width:75rem;
+    height: 45rem;
+    background-color: white;
+    display: flex;
+    border-radius: 2rem;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 1px 30px 21px -22px rgba(54, 54, 76, 0.8);
+}
+.photo{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+.photo-mob{
+    display: none;
+}
+.photo-main{
+    position: relative;
+    width: 100%;
+    height: 85%;
+    top: 4rem;
+    left: -7rem;
+    img{
+        clip-path: inset(0 0 0 7rem);
+    }
+}
+.photo-main::before{
+    content: url(../images/bg-pattern-desktop.svg);
+    position: absolute;
+    top: -31rem;
+    left: -41rem;
+    clip-path: inset(23.6rem 0 10.3rem 48rem);
+
+}
+.photo-main::after{
+    content: url(../images/illustration-box-desktop.svg);
+    position: absolute;
+    left: -0.75rem;
+    top: 11.3rem;
+}
+.content{
+    width: 50%;
+    height: 100%;
+    color: $colTxtDarkBlue;
+    margin: 0 8rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    .header{
+        margin-bottom: 1rem;
+    }
+    h1{
+        padding-top: 6rem;
+        font-size: 3rem;
+        color: $colPrimDarkBlue;
+        top: 4rem;
+    }
+}
+.quest{
+    border-bottom: 1px solid $colLightBlue;
+    padding: 1.5rem 0;
+}
+.question{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.question:hover{
+    color: $colPrimRed;
+}
+.answer{
+    display: none;
+}
+.quest-arr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    .arrow{
+        content: url(../images/icon-arrow-down.svg);
+    }
+}
+.active{
+    .question{
+        font-weight: 700;
+        padding-bottom: 1rem;
+        color: $colPrimDarkBlue;
+    }
+    .question:hover{
+        color: $colPrimRed;
+    }
+    .answer{
+        display: block;
+    }
+    .arrow{
+        transform: rotate(180deg) translateY(5px);
+    }
+}
+.attribution{
+    position: fixed;
+    bottom: 10px;
+    text-align: center;
+    color: $colPrimDarkBlue;
+    a{
+        color: hsl(244, 100%, 39%);
+        text-decoration: none;
+    }
+}
