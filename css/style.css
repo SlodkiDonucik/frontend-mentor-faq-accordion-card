@@ -251,12 +251,9 @@ body {
     top: -145px;
   }
   .photo-mob::before {
-    content: '';
+    content: url(../images/bg-pattern-mobile.svg);
     top: 65px;
-    height: 100px;
-    width: 100%;
     position: relative;
-    background-image: url(../images/bg-pattern-mobile.svg);
     display: inline-block;
   }
   .content {
